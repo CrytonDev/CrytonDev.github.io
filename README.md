@@ -1,2 +1,2 @@
-theme: THEME-NAME
+theme: hacker
 # CrytonDev.github.io
