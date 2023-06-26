@@ -4,26 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine Webseite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
     <style id="theme-style">
+    </style>
+    <style>
+        body {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        #theme-toggle {
+            cursor: pointer;
+            transition: all 0.5s ease;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        h1 {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+        p {
+            width: 70%;
+            margin: 40px auto;
+            line-height: 1.6;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            text-align: justify;
+        }
     </style>
 </head>
 <body>
-    <button onclick="toggleTheme()">Toggle Theme</button>
+    <div id="theme-toggle" onclick="toggleTheme()">
+        <span id="sun-icon" class="material-symbols-outlined">light_mode</span>
+        <span id="moon-icon" class="material-symbols-outlined">clear_night</span>
+    </div>
 
     <h1>Über Mich</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed ullamcorper nibh. Maecenas lobortis velit id dui ullamcorper, in consectetur dui laoreet. Vivamus eu tortor et sem pulvinar dignissim. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed ullamcorper nibh. Maecenas lobortis velit id dui ullamcorper, in consectetur dui laoreet. Vivamus eu tortor et sem pulvinar dignissim.</p>
 
     <script>
         const lightTheme = `
             body {
-                background-color: #FFFFFF;
-                color: #000000;
+                background-color: #FAFAFA;
+                color: #1A1A1A;
+            }
+            #moon-icon {
+                display: none;
+            }
+            #sun-icon {
+                display: inline;
             }
         `;
         const darkTheme = `
             body {
-                background-color: #000000;
-                color: #FFFFFF;
+                background-color: #1A1A1A;
+                color: #FAFAFA;
+            }
+            #moon-icon {
+                display: inline;
+            }
+            #sun-icon {
+                display: none;
             }
         `;
 
