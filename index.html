@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Webseite</title>
+    <style id="theme-style">
+    </style>
+</head>
+<body>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+
+    <h1>Über Mich</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed ullamcorper nibh. Maecenas lobortis velit id dui ullamcorper, in consectetur dui laoreet. Vivamus eu tortor et sem pulvinar dignissim. </p>
+
+    <script>
+        const lightTheme = `
+            body {
+                background-color: #FFFFFF;
+                color: #000000;
+            }
+        `;
+        const darkTheme = `
+            body {
+                background-color: #000000;
+                color: #FFFFFF;
+            }
+        `;
+
+        let isLightTheme = true;
+
+        function toggleTheme() {
+            const themeStyle = document.getElementById('theme-style');
+            themeStyle.innerHTML = isLightTheme ? darkTheme : lightTheme;
+            isLightTheme = !isLightTheme;
+        }
+
+        window.onload = function() {
+            toggleTheme();
+        };
+    </script>
+</body>
+</html>
